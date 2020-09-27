@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        generate_statistics: true
+        jdbc:
+          batch_size: 50
+
+csv:
+  file-location: src/main/resources/hdb-carpark-information.csv
+
+extra:
+  property: dev
+
+server:
+  port: 8081
